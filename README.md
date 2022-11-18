@@ -7,7 +7,7 @@ Leonardo Prado Cosenza
 ## Estrutura de Pastas
 ```MenuHub
 └── static
-    └── css
+    ├── css
     ├── images
     └── js
 └── templates

@@ -3,3 +3,11 @@ MenuHub permitirá a um restaurante registrar seu menu de pratos. A pessoa respo
 
 ## Membro(s) da Equipe
 Leonardo Prado Cosenza
+
+## Estrutura de Pastas
+|-  app.py  
+|- static/
+    |- css/
+    |- images/
+    |- js/
+|- templates

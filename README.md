@@ -5,7 +5,7 @@ MenuHub permitirá a um restaurante registrar seu menu de pratos. A pessoa respo
 Leonardo Prado Cosenza
 
 ## Estrutura de Pastas
-``app
+```app
 └── screens
     └── App
         └── screens
@@ -15,4 +15,4 @@ Leonardo Prado Cosenza
             │       └── Users
             └── Course
                 └── screens
-                    └── Assignments``
+                    └── Assignments```

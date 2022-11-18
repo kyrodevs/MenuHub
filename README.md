@@ -5,9 +5,20 @@ MenuHub permitirá a um restaurante registrar seu menu de pratos. A pessoa respo
 Leonardo Prado Cosenza
 
 ## Estrutura de Pastas
-|-  app.py  
-|- static/
-    |- css/
-    |- images/
-    |- js/
-|- templates
+├── src
+│   ├── controller
+│   │   ├── **/*.css
+│   ├── views
+│   ├── model
+│   ├── index.js
+├── public
+│   ├── css
+│   │   ├── **/*.css
+│   ├── images
+│   ├── js
+│   ├── index.html
+├── dist (or build
+├── node_modules
+├── package.json
+├── package-lock.json 
+└── .gitignore

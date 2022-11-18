@@ -5,7 +5,8 @@ MenuHub permitirá a um restaurante registrar seu menu de pratos. A pessoa respo
 Leonardo Prado Cosenza
 
 ## Estrutura de Pastas
-```MenuHub
+```
+MenuHub
 └── static
     ├── css
     ├── images

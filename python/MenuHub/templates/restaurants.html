@@ -1,0 +1,36 @@
+{% extends "application.html" %}
+
+{% block html_attribs %} lang pt_BR="BR"{% endblock %}
+
+{% block title %}Restaurantes{% endblock %}
+
+{% block content %}
+
+<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/styles.css') }}">
+
+{% include 'alert.html' %}
+
+<div class="container">
+    <div class="page-header">
+        <h1 class="text-center text-primary">MenuHub</h1>
+        <h3 class="text-center text-primary">Restaurantes</h3>
+    </div>
+    <form action="{{url_for('restaurants')}}" method="post" class="initial-form">
+
+        <p>
+            <label for="restaurantName">Nome do Restaurante</label>
+            <input type=text name=restaurantName id=restaurantName class="form-control" required>
+        </p>
+        <p>
+            <input type=submit value="Register new Restaurant" class="btn btn-primary">
+            <input type="button" value="Go to home page ->" class="btn btn-primary" onclick="redirect()">
+        </p>
+    </form>
+</div>
+
+<script>
+    function redirect() {
+        window.location.href = "{{url_for('login')}}";
+    }
+</script>
+{% endblock %}

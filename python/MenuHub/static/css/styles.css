@@ -1,0 +1,21 @@
+.align-middle {
+    vertical-align: middle !important;
+  }
+  
+  .actions {
+    width: 170px;
+  }
+  
+  .initial-form {
+    margin: auto;
+    width: 40%;
+    ;
+  }
+  
+  label {
+    margin-left: 5px;
+  }
+  
+  button {
+    margin-left: 5px;
+  }

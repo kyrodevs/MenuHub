@@ -1,0 +1,43 @@
+{% extends "application.html" %}
+
+{% block html_attribs %} lang pt_BR="BR"{% endblock %}
+
+{% block title %}Login{% endblock %}
+
+{% block content %}
+
+{% include 'alert.html' %}
+
+<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/styles.css') }}">
+
+
+<div class="container">
+    <div class="page-header">
+        <h1 class="text-center text-primary">MenuHub</h1>
+        <h3 class="text-center text-primary">Login</h3>
+        <p class="text-center text-secondary">Faça o login ou se registre para acessar a página.</p>
+
+    </div>
+    <form action="{{url_for('login')}}" method="post" class="initial-form">
+        <p>
+            <label for="email">Email</label>
+            <input type=text name=email id=email class="form-control">
+        </p>
+
+        <p>
+            <label for="userPassword">Senha</label>
+            <input type=password name=userPassword id=userPassword class="form-control">
+        </p>
+        <p>
+            <input type=submit value=Login class="btn btn-primary">
+            <input type="button" value=Register class="btn btn-primary" onclick="redirect()">
+        </p>
+    </form>
+</div>
+
+<script>
+    function redirect() {
+        window.location.href = "{{url_for('register')}}";
+    }
+</script>
+{% endblock %}

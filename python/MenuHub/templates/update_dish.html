@@ -1,0 +1,35 @@
+{% extends "application.html" %}
+
+{% block html_attribs %} lang="pt-BR" {% endblock %}
+
+{% block title %}Update Dish{% endblock %}
+
+{% block content %}
+
+{% include 'alert.html' %}
+
+<div class="container">
+   <div class="page-header">
+      <h1 class="text-center text-primary">MenuHub</h1>
+      <h3 class="text-center text-primary">Modifique um Prato</h3>
+   </div>
+
+   <form class="form-inline" action="/update_dish" method="POST">
+      <div class="form-group">
+         <input type="hidden" class="form-control" name="dish_id" id="dish_id" value="{{dish.id}}">
+         <label for="dish_name">Nome do prato</label>
+         <input type="text" class="form-control" name="dish_name" id="dish_name" value="{{dish.name}}">
+         <label for="price">Preço</label>
+         <input type="number" class="form-control" name="price" id="price" value="{{dish.price}}">
+         <label for="category">Escolha uma categoria</label>
+         <select name="category" class="form-select" id="category">
+            <option value="entrada">Entrada</option>
+            <option value="principal">Principal</option>
+            <option value="sobremesa">Sobremesa</option>
+         </select>
+         <button type="submit" class="btn btn-primary">Atualizar</button>
+         <a class="btn btn-danger" href="/home">Cancelar</a>
+      </div>
+   </form>
+</div>
+{% endblock %}

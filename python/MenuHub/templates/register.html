@@ -1,0 +1,48 @@
+{% extends "application.html" %}
+
+{% block html_attribs %} lang pt_BR="BR"{% endblock %}
+
+{% block title %}Register{% endblock %}
+
+{% block content %}
+
+<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/styles.css') }}">
+
+{% include 'alert.html' %}
+
+<div class="container">
+    <div class="page-header">
+        <h1 class="text-center text-primary">MenuHub</h1>
+        <h3 class="text-center text-primary">Registre-se no MenuHub</h3>
+    </div>
+    <form action="{{url_for('register')}}" method="post" class="initial-form">
+
+        <p>
+            <label for="userName">Nome</label>
+            <input type=text name=userName id=userName class="form-control" required>
+        </p>
+        <p>
+            <label for="email">Email</label>
+            <input type=text name=email id=email class="form-control" required>
+        </p>
+        <p>
+            <label for="userPassword">Senha</label>
+            <input type=password name=userPassword id=userPassword class="form-control" required>
+        </p>
+        <p>
+            <label for="isAdmin">é Admin</label>
+            <input type="checkbox" name=isAdmin id=isAdmin class="form-check-input">
+        </p>
+        <p>
+            <input type=submit value="Register new user" class="btn btn-primary">
+            <input type="button" value="Go to login ->" class="btn btn-primary" onclick="redirect()">
+        </p>
+    </form>
+</div>
+
+<script>
+    function redirect() {
+        window.location.href = "{{url_for('login')}}";
+    }
+</script>
+{% endblock %}
